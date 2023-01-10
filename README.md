@@ -64,14 +64,14 @@ NOTA:  Cada  microservicio  deberá  correr  de  forma  independiente  como  un 
 #### Primero:
 Tener un endpoint de redis `en mi caso lo hice localmente`  y configurarlo en el archivo `Prueba_Tecnica-T.evolvers/redis_client/conection.py  ` 
 #### Segundo:
-Ejecutar el archivo `Prueba_Tecnica-T.evolvers/productor_simulador.py`, y abrir en paralelo 2 consolas con el entorno virtual de proyecto para poder ejecutar los microservicios consumidores
+Ejecutar el archivo `Prueba_Tecnica-T.evolvers/productor_simulador.py`, y abrir en paralelo 2 consolas con el entorno virtual del proyecto para poder ejecutar los microservicios consumidores
 
 Microservicio de notificación `Prueba_Tecnica-T.evolvers/consumidor_notification.py  `
 
 Microservicio de POST con FastApi `Prueba_Tecnica-T.evolvers/consumidor_post.py `
 #### Tercero:
 Al ingresar los datos se genera un evento mediante Redis Stream donde se notificara si la metrica supero un umbral mayor a 50N de su medida.\
-Se generara tambien mediante Redis Stream un peticion de POST mediante FastApi.
+Se generará tambien con Redis Stream un peticion de POST mediante FastApi.
 #### Cuarto:
 Todo lo generado por sesión de ejecución de `Prueba_Tecnica-T.evolvers/productor_simulador.py`, se guardará en un CSV, para su análisis.
 #### Quinto:
